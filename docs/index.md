@@ -10,15 +10,15 @@ title: Home
 
 <div class="grid">
     <div class="card">
-        <h3>⚽️ Football Analytics</h3>
+        <h3>Football Analytics</h3>
         <p>Expected Goals, Pitch Control, Passing Networks, Scouting Dashboards.</p>
     </div>
     <div class="card">
-        <h3>🏈 NFL Analytics</h3>
+        <h3>NFL Analytics</h3>
         <p>Win Probability, Play-by-Play API, Expected Points Added, Draft Prediction.</p>
     </div>
     <div class="card">
-        <h3>🚀 Production Ready</h3>
+        <h3>Production Ready</h3>
         <p>Automated Pipelines, Robust Architectures, Streamlit & FastAPI.</p>
     </div>
 </div>

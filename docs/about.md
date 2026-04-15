@@ -7,7 +7,7 @@ title: About Me
 
 **ML Engineer | Data Scientist specializing in Sports Analytics**
 
-I build professional-grade data products for football ⚽ and American football 🏈. My focus is on robust feature engineering, predictive modeling with proper temporal validation, and deploying ML pipelines that provide actionable insights.
+I build professional-grade data products for football and American football. My focus is on robust feature engineering, predictive modeling with proper temporal validation, and deploying ML pipelines that provide actionable insights.
 
 ## Skills Focus
 - Machine Learning (XGBoost, Interpretable models, Probabilistic calibration)

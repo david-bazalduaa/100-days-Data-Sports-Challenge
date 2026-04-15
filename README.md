@@ -1,8 +1,8 @@
-# 🏟️ 100 Days of Data & Sports Challenge
+# 100 Days of Data & Sports Challenge
 
 > **ML Engineer | Data Scientist** — Sports Analytics Specialization
 >
-> Building professional-grade data products for football ⚽ and American football 🏈.
+> Building professional-grade data products for football and American football.
 
 [![Progress](https://img.shields.io/badge/Progress-Day%201%2F100-brightgreen?style=for-the-badge)]()
 [![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=for-the-badge&logo=python&logoColor=white)]()
@@ -10,7 +10,7 @@
 
 ---
 
-## 🎯 What Is This?
+## What Is This?
 
 A **100-day intensive challenge** to build a professional sports analytics portfolio from scratch. Six end-to-end ML projects covering predictive modeling, player scouting, win probability, match forecasting, interactive visualization, and draft analytics — all deployed and publicly accessible.
 
@@ -18,20 +18,20 @@ A **100-day intensive challenge** to build a professional sports analytics portf
 
 ---
 
-## 📊 Projects
+## Projects
 
 | # | Project | Sport | Type | Status |
 |---|---------|-------|------|--------|
-| 1 | **FootballScout** — Player Similarity Engine | ⚽ Football | Scouting / Unsupervised ML | 🔲 |
-| 2 | **xG-Lab** — Expected Goals from Scratch | ⚽ Football | Predictive Model | 🔲 |
-| 3 | **GridironML** — NFL Win Probability API | 🏈 NFL | ML API / Deployment | 🔲 |
-| 4 | **MatchOracle** — Match Outcome Forecaster | ⚽ Football | Forecasting System | 🔲 |
-| 5 | **GamePulse** — Interactive Game Flow Analyzer | ⚽🏈 Multi | Visualization Product | 🔲 |
-| 6 | **DraftEdge** — NFL Draft Success Predictor | 🏈 NFL | Prediction / Talent Eval | 🔲 |
+| 1 | **FootballScout** — Player Similarity Engine | Football | Scouting / Unsupervised ML | 🔲 |
+| 2 | **xG-Lab** — Expected Goals from Scratch | Football | Predictive Model | 🔲 |
+| 3 | **GridironML** — NFL Win Probability API | NFL | ML API / Deployment | 🔲 |
+| 4 | **MatchOracle** — Match Outcome Forecaster | Football | Forecasting System | 🔲 |
+| 5 | **GamePulse** — Interactive Game Flow Analyzer | Multi | Visualization Product | 🔲 |
+| 6 | **DraftEdge** — NFL Draft Success Predictor | NFL | Prediction / Talent Eval | 🔲 |
 
 ---
 
-## 🗺️ Roadmap
+## Roadmap
 
 | Phase | Days | Focus | Status |
 |-------|------|-------|--------|
@@ -43,7 +43,7 @@ A **100-day intensive challenge** to build a professional sports analytics portf
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Category | Tools |
 |----------|-------|
@@ -57,7 +57,7 @@ A **100-day intensive challenge** to build a professional sports analytics portf
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```
 100-days-Data-Sports-Challenge/
@@ -105,7 +105,7 @@ A **100-day intensive challenge** to build a professional sports analytics portf
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ```bash
 # Clone the repository
@@ -135,20 +135,20 @@ make api
 
 ---
 
-## 📅 Daily Log
+## Daily Log
 
 | Week | Days | Milestone | Highlight |
 |------|------|-----------|-----------|
-| 1 | 1–7 | 🏗️ Infrastructure | Repo + Web + Data Pipelines |
-| 2 | 8–14 | 📊 Data Foundation | Quality reports + schemas + viz |
-| 3 | 15–21 | 🔍 EDA Kickoff | Shot analysis + passing networks |
+| 1 | 1–7 | Infrastructure | Repo + Web + Data Pipelines |
+| 2 | 8–14 | Data Foundation | Quality reports + schemas + viz |
+| 3 | 15–21 | EDA Kickoff | Shot analysis + passing networks |
 | ... | ... | ... | ... |
 
 *Full daily tracker available on the [portfolio website]()*
 
 ---
 
-## 📖 Key Decisions
+## Key Decisions
 
 - **Temporal validation only** — No random splits for time-series sports data. All models use season-based or expanding-window CV.
 - **Per-90 normalization** — Player stats normalized per 90 minutes to account for playing time differences.
@@ -157,16 +157,16 @@ make api
 
 ---
 
-## 👤 Author
+## Author
 
 **David Bazaldua** — ML Engineer building data products for the sports industry.
 
-- 🌐 [Portfolio]()
-- 💼 [LinkedIn]()
-- 📧 [Email]()
+- [Portfolio]()
+- [LinkedIn]()
+- [Email]()
 
 ---
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License — see [LICENSE](LICENSE) for details.
