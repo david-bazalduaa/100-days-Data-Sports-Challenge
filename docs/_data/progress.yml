@@ -1,40 +1,600 @@
 - day: 1
   phase: 1
-  objective: "Architecture & Project Setup"
+  objective: "Arquitectura del repo"
+  duration: "60 min"
+  deliverable: "Repo profesional + Makefile"
   status: "completed"
 - day: 2
   phase: 1
-  objective: "GitHub Pages & Portfolio Base"
+  objective: "GitHub Pages setup"
+  duration: "60 min"
+  deliverable: "Sitio web live"
   status: "completed"
 - day: 3
   phase: 1
-  objective: "Interactive Progress Tracker"
+  objective: "Tracker de progreso"
+  duration: "45 min"
+  deliverable: "Tracker visual en web"
   status: "completed"
 - day: 4
   phase: 1
-  objective: "StatsBomb Open Data Exploration"
+  objective: "StatsBomb Open Data"
+  duration: "60 min"
+  deliverable: "Notebook + datos descargados"
   status: "pending"
 - day: 5
   phase: 1
-  objective: "NFL nflverse Data Exploration"
+  objective: "nflverse data"
+  duration: "60 min"
+  deliverable: "Notebook + datos descargados"
   status: "pending"
 - day: 6
   phase: 1
-  objective: "FBref Scraper"
+  objective: "FBref scraper"
+  duration: "60 min"
+  deliverable: "Script de scraping funcional"
   status: "pending"
 - day: 7
   phase: 1
-  objective: "Unified Ingestion Pipeline"
+  objective: "Pipeline de ingestión"
+  duration: "60 min"
+  deliverable: "Módulo de carga + tests"
   status: "pending"
 - day: 8
   phase: 1
-  objective: "Data Quality Checks (Football)"
+  objective: "Data quality fútbol"
+  duration: "45 min"
+  deliverable: "Quality report HTML"
   status: "pending"
 - day: 9
   phase: 1
-  objective: "Data Quality Checks (NFL)"
+  objective: "Data quality NFL"
+  duration: "45 min"
+  deliverable: "Quality report HTML"
   status: "pending"
 - day: 10
   phase: 1
-  objective: "Football Dimensional Schema"
+  objective: "Schema fútbol"
+  duration: "45 min"
+  deliverable: "ERD + datos procesados"
+  status: "pending"
+- day: 11
+  phase: 1
+  objective: "Schema NFL"
+  duration: "45 min"
+  deliverable: "ERD + datos procesados"
+  status: "pending"
+- day: 12
+  phase: 1
+  objective: "Tracking data intro"
+  duration: "60 min"
+  deliverable: "Notebook + visualización"
+  status: "pending"
+- day: 13
+  phase: 1
+  objective: "Librería de visualización"
+  duration: "60 min"
+  deliverable: "Módulo viz + galería"
+  status: "pending"
+- day: 14
+  phase: 1
+  objective: "Publicar Fase 1"
+  duration: "45 min"
+  deliverable: "Web actualizada + journal"
+  status: "pending"
+- day: 15
+  phase: 1
+  objective: "Retrospectiva F1"
+  duration: "30 min"
+  deliverable: "Release v0.1"
+  status: "pending"
+- day: 16
+  phase: 2
+  objective: "Shot analysis EDA"
+  duration: "60 min"
+  deliverable: "Shot maps publicables"
+  status: "pending"
+- day: 17
+  phase: 2
+  objective: "xG features (parte 1)"
+  duration: "60 min"
+  deliverable: "Feature script + validación"
+  status: "pending"
+- day: 18
+  phase: 2
+  objective: "xG features geométricas"
+  duration: "45 min"
+  deliverable: "Features avanzadas"
+  status: "pending"
+- day: 19
+  phase: 2
+  objective: "Passing networks"
+  duration: "60 min"
+  deliverable: "Grafos de pases + métricas"
+  status: "pending"
+- day: 20
+  phase: 2
+  objective: "NFL offensive EDA"
+  duration: "60 min"
+  deliverable: "Análisis EPA por equipo"
+  status: "pending"
+- day: 21
+  phase: 2
+  objective: "NFL player features"
+  duration: "60 min"
+  deliverable: "Feature store por posición"
+  status: "pending"
+- day: 22
+  phase: 2
+  objective: "Rolling features"
+  duration: "45 min"
+  deliverable: "Módulo temporal + anti-leakage"
+  status: "pending"
+- day: 23
+  phase: 2
+  objective: "Per-90 y radar charts"
+  duration: "45 min"
+  deliverable: "Radar charts publicables"
+  status: "pending"
+- day: 24
+  phase: 2
+  objective: "Pressing analysis"
+  duration: "60 min"
+  deliverable: "PPDA + heatmaps defensivos"
+  status: "pending"
+- day: 25
+  phase: 2
+  objective: "NFL situational analysis"
+  duration: "60 min"
+  deliverable: "Features situacionales"
+  status: "pending"
+- day: 26
+  phase: 2
+  objective: "Player heatmaps KDE"
+  duration: "45 min"
+  deliverable: "Heatmaps de jugadores"
+  status: "pending"
+- day: 27
+  phase: 2
+  objective: "Player clustering"
+  duration: "60 min"
+  deliverable: "Clusters interpretados"
+  status: "pending"
+- day: 28
+  phase: 2
+  objective: "Player Similarity Engine"
+  duration: "60 min"
+  deliverable: "Módulo de similarity"
+  status: "pending"
+- day: 29
+  phase: 2
+  objective: "Proyecto 1 README"
+  duration: "45 min"
+  deliverable: "README + web page"
+  status: "pending"
+- day: 30
+  phase: 2
+  objective: "NFL Draft & Combine EDA"
+  duration: "60 min"
+  deliverable: "Análisis de combine metrics"
+  status: "pending"
+- day: 31
+  phase: 2
+  objective: "Draft features"
+  duration: "45 min"
+  deliverable: "Feature store draft"
+  status: "pending"
+- day: 32
+  phase: 2
+  objective: "Possession analysis"
+  duration: "45 min"
+  deliverable: "Field tilt + territory"
+  status: "pending"
+- day: 33
+  phase: 2
+  objective: "Formation analysis"
+  duration: "60 min"
+  deliverable: "Formaciones + stats"
+  status: "pending"
+- day: 34
+  phase: 2
+  objective: "Journal post Fase 2"
+  duration: "45 min"
+  deliverable: "Blog post publicado"
+  status: "pending"
+- day: 35
+  phase: 2
+  objective: "Retrospectiva F2"
+  duration: "30 min"
+  deliverable: "Release v0.2"
+  status: "pending"
+- day: 36
+  phase: 3
+  objective: "Temporal validation framework"
+  duration: "60 min"
+  deliverable: "Módulo de CV temporal"
+  status: "pending"
+- day: 37
+  phase: 3
+  objective: "xG baseline (Logistic)"
+  duration: "60 min"
+  deliverable: "Baseline + calibración"
+  status: "pending"
+- day: 38
+  phase: 3
+  objective: "xG boosting + SHAP"
+  duration: "60 min"
+  deliverable: "XGBoost + SHAP plots"
+  status: "pending"
+- day: 39
+  phase: 3
+  objective: "xG calibración + errors"
+  duration: "45 min"
+  deliverable: "Modelo calibrado"
+  status: "pending"
+- day: 40
+  phase: 3
+  objective: "xG packaging (Proyecto 2)"
+  duration: "45 min"
+  deliverable: "README + modelo serializado"
+  status: "pending"
+- day: 41
+  phase: 3
+  objective: "NFL WP features"
+  duration: "60 min"
+  deliverable: "Feature store WP"
+  status: "pending"
+- day: 42
+  phase: 3
+  objective: "NFL WP baseline"
+  duration: "60 min"
+  deliverable: "WP chart + métricas"
+  status: "pending"
+- day: 43
+  phase: 3
+  objective: "NFL WP advanced"
+  duration: "60 min"
+  deliverable: "Modelo con contexto"
+  status: "pending"
+- day: 44
+  phase: 3
+  objective: "NFL WP packaging (Proyecto 3)"
+  duration: "45 min"
+  deliverable: "Modelo calibrado + docs"
+  status: "pending"
+- day: 45
+  phase: 3
+  objective: "Match result prediction"
+  duration: "60 min"
+  deliverable: "Modelo multiclass"
+  status: "pending"
+- day: 46
+  phase: 3
+  objective: "RPS y análisis vs odds"
+  duration: "45 min"
+  deliverable: "Evaluación vs mercado"
+  status: "pending"
+- day: 47
+  phase: 3
+  objective: "Elo/Power Rankings"
+  duration: "60 min"
+  deliverable: "Sistema Elo propio"
+  status: "pending"
+- day: 48
+  phase: 3
+  objective: "Elo as feature"
+  duration: "45 min"
+  deliverable: "Ablation study"
+  status: "pending"
+- day: 49
+  phase: 3
+  objective: "MLflow/W&B setup"
+  duration: "60 min"
+  deliverable: "Experiments tracked"
+  status: "pending"
+- day: 50
+  phase: 3
+  objective: "NFL player projection"
+  duration: "60 min"
+  deliverable: "QB projection model"
+  status: "pending"
+- day: 51
+  phase: 3
+  objective: "Bayesian estimation"
+  duration: "60 min"
+  deliverable: "Shrinkage analysis"
+  status: "pending"
+- day: 52
+  phase: 3
+  objective: "xG chain value"
+  duration: "60 min"
+  deliverable: "Chain value rankings"
+  status: "pending"
+- day: 53
+  phase: 3
+  objective: "VAEP simplificado"
+  duration: "60 min"
+  deliverable: "VAEP rankings"
+  status: "pending"
+- day: 54
+  phase: 3
+  objective: "Ensemble/stacking"
+  duration: "45 min"
+  deliverable: "Stacked model"
+  status: "pending"
+- day: 55
+  phase: 3
+  objective: "Draft Value Predictor"
+  duration: "60 min"
+  deliverable: "Modelo + SHAP"
+  status: "pending"
+- day: 56
+  phase: 3
+  objective: "Aging curves"
+  duration: "45 min"
+  deliverable: "Curvas por posición"
+  status: "pending"
+- day: 57
+  phase: 3
+  objective: "Market value prediction"
+  duration: "60 min"
+  deliverable: "Modelo de valor"
+  status: "pending"
+- day: 58
+  phase: 3
+  objective: "Journal post Fase 3"
+  duration: "45 min"
+  deliverable: "Blog post publicado"
+  status: "pending"
+- day: 59
+  phase: 3
+  objective: "Code review + refactoring"
+  duration: "45 min"
+  deliverable: "Código limpio"
+  status: "pending"
+- day: 60
+  phase: 3
+  objective: "Retrospectiva F3"
+  duration: "30 min"
+  deliverable: "Release v0.3"
+  status: "pending"
+- day: 61
+  phase: 4
+  objective: "Scouting Dashboard wireframe"
+  duration: "45 min"
+  deliverable: "Wireframe + spec"
+  status: "pending"
+- day: 62
+  phase: 4
+  objective: "Scouting Dashboard backend"
+  duration: "60 min"
+  deliverable: "Data backend"
+  status: "pending"
+- day: 63
+  phase: 4
+  objective: "Scouting Dashboard UI (1)"
+  duration: "60 min"
+  deliverable: "Streamlit con filtros"
+  status: "pending"
+- day: 64
+  phase: 4
+  objective: "Scouting Dashboard UI (2)"
+  duration: "60 min"
+  deliverable: "Dashboard completo"
+  status: "pending"
+- day: 65
+  phase: 4
+  objective: "Scouting Dashboard deploy"
+  duration: "45 min"
+  deliverable: "Dashboard live (P1)"
+  status: "pending"
+- day: 66
+  phase: 4
+  objective: "NFL API design"
+  duration: "45 min"
+  deliverable: "Spec + schemas"
+  status: "pending"
+- day: 67
+  phase: 4
+  objective: "NFL API implementation"
+  duration: "60 min"
+  deliverable: "API + tests"
+  status: "pending"
+- day: 68
+  phase: 4
+  objective: "NFL API Docker deploy"
+  duration: "60 min"
+  deliverable: "API deployed (P3)"
+  status: "pending"
+- day: 69
+  phase: 4
+  objective: "NFL API docs + demo"
+  duration: "45 min"
+  deliverable: "README + notebook demo"
+  status: "pending"
+- day: 70
+  phase: 4
+  objective: "Match Forecaster design"
+  duration: "45 min"
+  deliverable: "System design doc"
+  status: "pending"
+- day: 71
+  phase: 4
+  objective: "Match Forecaster pipeline"
+  duration: "60 min"
+  deliverable: "Pipeline automatizado"
+  status: "pending"
+- day: 72
+  phase: 4
+  objective: "Match Forecaster frontend"
+  duration: "60 min"
+  deliverable: "Web de predicciones"
+  status: "pending"
+- day: 73
+  phase: 4
+  objective: "Match Forecaster backtesting"
+  duration: "45 min"
+  deliverable: "Backtesting report"
+  status: "pending"
+- day: 74
+  phase: 4
+  objective: "Match Forecaster packaging (P4)"
+  duration: "45 min"
+  deliverable: "Proyecto documentado"
+  status: "pending"
+- day: 75
+  phase: 4
+  objective: "Game Flow Visualizer fútbol"
+  duration: "60 min"
+  deliverable: "Viz interactiva fútbol"
+  status: "pending"
+- day: 76
+  phase: 4
+  objective: "Game Flow Visualizer NFL"
+  duration: "60 min"
+  deliverable: "Viz interactiva NFL"
+  status: "pending"
+- day: 77
+  phase: 4
+  objective: "Game Flow deploy (P5)"
+  duration: "45 min"
+  deliverable: "App desplegada"
+  status: "pending"
+- day: 78
+  phase: 4
+  objective: "Route Classification NFL"
+  duration: "60 min"
+  deliverable: "Clasificador de rutas"
+  status: "pending"
+- day: 79
+  phase: 4
+  objective: "Pitch Control model"
+  duration: "60 min"
+  deliverable: "Modelo + heatmap"
+  status: "pending"
+- day: 80
+  phase: 4
+  objective: "Automated weekly reports"
+  duration: "45 min"
+  deliverable: "Script automatizado"
+  status: "pending"
+- day: 81
+  phase: 4
+  objective: "MLflow model registry"
+  duration: "45 min"
+  deliverable: "Registry configurado"
+  status: "pending"
+- day: 82
+  phase: 4
+  objective: "Model drift monitoring"
+  duration: "45 min"
+  deliverable: "Drift detection script"
+  status: "pending"
+- day: 83
+  phase: 4
+  objective: "Journal post Fase 4"
+  duration: "45 min"
+  deliverable: "Blog post publicado"
+  status: "pending"
+- day: 84
+  phase: 4
+  objective: "Code quality final pass"
+  duration: "45 min"
+  deliverable: "CI passing"
+  status: "pending"
+- day: 85
+  phase: 4
+  objective: "Retrospectiva F4"
+  duration: "30 min"
+  deliverable: "Release v0.4"
+  status: "pending"
+- day: 86
+  phase: 5
+  objective: "READMEs portfolio-grade"
+  duration: "60 min"
+  deliverable: "6 READMEs pulidos"
+  status: "pending"
+- day: 87
+  phase: 5
+  objective: "Hero images/GIFs"
+  duration: "60 min"
+  deliverable: "6 hero assets"
+  status: "pending"
+- day: 88
+  phase: 5
+  objective: "Web project pages"
+  duration: "60 min"
+  deliverable: "6 project pages"
+  status: "pending"
+- day: 89
+  phase: 5
+  objective: "Web journal + timeline"
+  duration: "45 min"
+  deliverable: "Journal completo"
+  status: "pending"
+- day: 90
+  phase: 5
+  objective: "About Me page"
+  duration: "45 min"
+  deliverable: "About Me profesional"
+  status: "pending"
+- day: 91
+  phase: 5
+  objective: "CV update"
+  duration: "45 min"
+  deliverable: "CV con sports analytics"
+  status: "pending"
+- day: 92
+  phase: 5
+  objective: "LinkedIn post #1"
+  duration: "45 min"
+  deliverable: "Post publicado"
+  status: "pending"
+- day: 93
+  phase: 5
+  objective: "LinkedIn post #2"
+  duration: "45 min"
+  deliverable: "Post publicado"
+  status: "pending"
+- day: 94
+  phase: 5
+  objective: "LinkedIn post #3 draft"
+  duration: "30 min"
+  deliverable: "Draft del post final"
+  status: "pending"
+- day: 95
+  phase: 5
+  objective: "Interview prep: preguntas"
+  duration: "60 min"
+  deliverable: "20+ Q&A documento"
+  status: "pending"
+- day: 96
+  phase: 5
+  objective: "Interview prep: case study"
+  duration: "60 min"
+  deliverable: "Walkthrough de proyecto"
+  status: "pending"
+- day: 97
+  phase: 5
+  objective: "Portfolio one-pager"
+  duration: "45 min"
+  deliverable: "One-pager PDF"
+  status: "pending"
+- day: 98
+  phase: 5
+  objective: "Web QA final"
+  duration: "45 min"
+  deliverable: "Sitio impecable"
+  status: "pending"
+- day: 99
+  phase: 5
+  objective: "Final cleanup + v1.0"
+  duration: "45 min"
+  deliverable: "Release v1.0"
+  status: "pending"
+- day: 100
+  phase: 5
+  objective: "🎉 Publicación final"
+  duration: "60 min"
+  deliverable: "Post LinkedIn + cierre"
   status: "pending"
