@@ -161,9 +161,9 @@ make api
 
 **David Bazaldua** — ML Engineer building data products for the sports industry.
 
-- [Portfolio]()
-- [LinkedIn]()
-- [Email]()
+- [Portfolio](https://david-bazalduaa.github.io/David_Portfolio/)
+- [LinkedIn](https://www.linkedin.com/in/david-bazaldua-mendez-972630277/)
+- [Email](david.bazmen@gmail.com)
 
 ---
 
