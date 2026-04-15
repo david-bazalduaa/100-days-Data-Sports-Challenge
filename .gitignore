@@ -1,0 +1,83 @@
+# ============================================================================
+# 100 Days of Data & Sports Challenge — .gitignore
+# ============================================================================
+
+# ----- Python -----
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+*.egg
+.eggs/
+
+# ----- Virtual Environments -----
+.venv/
+venv/
+env/
+ENV/
+
+# ----- Jupyter Notebooks -----
+.ipynb_checkpoints/
+*.ipynb_meta
+
+# ----- Data (large files should NOT be in git) -----
+data/raw/**/*.csv
+data/raw/**/*.parquet
+data/raw/**/*.json
+data/raw/**/*.xlsx
+data/processed/**/*.csv
+data/processed/**/*.parquet
+data/processed/**/*.json
+data/external/**/*.csv
+data/external/**/*.parquet
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/external/.gitkeep
+!data/raw/**/.gitkeep
+!data/processed/**/.gitkeep
+
+# ----- Models (serialized models) -----
+models/**/*.pkl
+models/**/*.joblib
+models/**/*.onnx
+models/**/*.pt
+models/**/*.h5
+!models/**/.gitkeep
+
+# ----- Reports (generated) -----
+reports/html/*.html
+reports/figures/*.png
+reports/figures/*.svg
+!reports/**/.gitkeep
+
+# ----- MLflow / W&B -----
+mlruns/
+wandb/
+*.mlflow
+
+# ----- Docker -----
+.docker/
+
+# ----- IDE / OS -----
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ----- Secrets -----
+.env
+.env.local
+*.key
+secrets/
+
+# ----- Misc -----
+*.log
+*.tmp
+*.bak
+.cache/
