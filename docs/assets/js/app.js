@@ -245,4 +245,22 @@ document.addEventListener('DOMContentLoaded', () => {
     initNav();
     initDetailClose();
     initDetailToggle();
+
+    // Check for day link hash in URL (e.g. #day-5)
+    const hash = window.location.hash;
+    if (hash && hash.startsWith('#day-')) {
+        const dayMatch = hash.match(/#day-(\d+)/);
+        if (dayMatch && dayMatch[1]) {
+            const dayNum = parseInt(dayMatch[1], 10);
+            const item = PROGRESS_DATA.find(d => d.day === dayNum);
+            if (item) {
+                showDetail(item);
+                // Also scroll to tracker
+                const tracker = document.getElementById('tracker');
+                if (tracker) {
+                    tracker.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        }
+    }
 });

@@ -3,8 +3,10 @@
 > **ML Engineer | Data Scientist** — Sports Analytics Specialization
 >
 > Building professional-grade data products for football and American football.
+>
+> 📊 **Dashboard de Seguimiento:** [david-bazalduaa.github.io/100-days-Data-Sports-Challenge](https://david-bazalduaa.github.io/100-days-Data-Sports-Challenge/)
 
-[![Progress](https://img.shields.io/badge/Progress-Day%201%2F100-brightgreen?style=for-the-badge)]()
+[![Progress](https://img.shields.io/badge/Progress-Day%207%2F100-brightgreen?style=for-the-badge)]()
 [![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=for-the-badge&logo=python&logoColor=white)]()
 [![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)]()
 
@@ -139,12 +141,12 @@ make api
 
 | Week | Days | Milestone | Highlight |
 |------|------|-----------|-----------|
-| 1 | 1–7 | Infrastructure | Repo + Web + Data Pipelines |
-| 2 | 8–14 | Data Foundation | Quality reports + schemas + viz |
-| 3 | 15–21 | EDA Kickoff | Shot analysis + passing networks |
+| 1 | [Days 1–7](https://david-bazalduaa.github.io/100-days-Data-Sports-Challenge/#tracker) | Infrastructure | Repo + Web + Data Pipelines |
+| 2 | [Days 8–14](https://david-bazalduaa.github.io/100-days-Data-Sports-Challenge/#tracker) | Data Foundation | Quality reports + schemas + viz |
+| 3 | [Days 15–21](https://david-bazalduaa.github.io/100-days-Data-Sports-Challenge/#tracker) | EDA Kickoff | Shot analysis + passing networks |
 | ... | ... | ... | ... |
 
-*Full daily tracker available on the [portfolio website]()*
+*Full daily tracker available on the [Dashboard de Seguimiento](https://david-bazalduaa.github.io/100-days-Data-Sports-Challenge/#tracker)*
 
 ---
 
