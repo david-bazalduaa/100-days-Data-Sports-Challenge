@@ -25,7 +25,7 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-RAW_DATA_DIR = "/Users/davidbazalduamendez/Documents/GitHub/100-days-Data-Sports-Challenge/data/raw"
+RAW_DATA_DIR = "C:\\Users\\david\\Desktop\\David\\Documentos\\David\\GitHub\\100-days-Data-Sports-Challenge\\data\\raw"
 os.makedirs(RAW_DATA_DIR, exist_ok=True) # Ensure directory exists
 
 # FBref League IDs mapping
@@ -132,16 +132,21 @@ def load_statsbomb(competition_id: int, season_id: int) -> pd.DataFrame:
 def load_nfl(years: list, data_type: str = "pbp") -> pd.DataFrame:
     """
     Loads NFL data for given years. 
-    data_type can be 'pbp' (play-by-play) or 'roster'.
+    Uses Parquet format for optimized storage and fast reading.
     """
-    # Create a safe string from the list of years (e.g., [2022, 2023] -> "2022_2023")
+    # Create a safe string from the list of years
     years_str = "_".join(map(str, years))
-    filepath = f"{RAW_DATA_DIR}/nfl/nfl_{data_type}_{years_str}.csv"
     
-    # 1. Check Cache
-    cached_data = _check_local_cache(filepath)
-    if cached_data is not None:
-        return cached_data
+    # NEW: Change extension to .parquet
+    filepath = f"{RAW_DATA_DIR}/nfl/nfl_{data_type}_{years_str}.parquet"
+    
+    # Ensure the directory exists
+    os.makedirs(os.path.dirname(filepath), exist_ok=True)
+    
+    # 1. Check Cache (NEW: read_parquet)
+    if os.path.exists(filepath):
+        logger.info(f"Local cache found. Loading Parquet data from: {filepath}")
+        return pd.read_parquet(filepath, engine="pyarrow")
         
     # 2. Download via API
     logger.info(f"Downloading NFL {data_type} data for years: {years}")
@@ -154,7 +159,8 @@ def load_nfl(years: list, data_type: str = "pbp") -> pd.DataFrame:
             logger.error(f"Unsupported NFL data type: {data_type}")
             return None
             
-        df.to_csv(filepath, index=False)
+        # NEW: Save as Parquet instead of CSV
+        df.to_parquet(filepath, index=False, engine="pyarrow")
         logger.info(f"Data successfully saved to {filepath}")
         return df
         
