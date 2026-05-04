@@ -25,7 +25,7 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-RAW_DATA_DIR = "C:\\Users\\david\\Desktop\\David\\Documentos\\David\\GitHub\\100-days-Data-Sports-Challenge\\data\\raw"
+RAW_DATA_DIR = "/Users/davidbazalduamendez/Documents/GitHub/100-days-Data-Sports-Challenge/data/raw"
 os.makedirs(RAW_DATA_DIR, exist_ok=True) # Ensure directory exists
 
 # FBref League IDs mapping
@@ -105,28 +105,72 @@ def load_fbref(league: str, season: str = "2023-2024") -> pd.DataFrame:
 from statsbombpy import sb
 import nfl_data_py as nfl
 
-def load_statsbomb(competition_id: int, season_id: int) -> pd.DataFrame:
+def load_statsbomb_matches(competition_id: int, season_id: int) -> pd.DataFrame:
     """
     Loads StatsBomb match data for a specific competition and season.
     """
-    filepath = f"{RAW_DATA_DIR}/statsbomb/sb_matches_{competition_id}_{season_id}.csv"
+    # 1. Cambiamos la extensión a .parquet
+    filepath = f"{RAW_DATA_DIR}/statsbomb/sb_matches_{competition_id}_{season_id}.parquet"
 
-    # 1. Check Cache
+    # 2. Check Cache
     cached_data = _check_local_cache(filepath)
     if cached_data is not None:
         return cached_data
         
-    # 2. Download via API
+    # 3. Download via API
     logger.info(f"Downloading StatsBomb data for comp: {competition_id}, season: {season_id}")
     try:
+        import statsbombpy.sb as sb
         df = sb.matches(competition_id=competition_id, season_id=season_id)
         
-        df.to_csv(filepath, index=False)
+        # 4. Usamos to_parquet en lugar de to_csv
+        df.to_parquet(filepath, index=False, engine='pyarrow')
         logger.info(f"Data successfully saved to {filepath}")
         return df
         
     except Exception as e:
         logger.error(f"Failed to load StatsBomb data: {e}")
+        return None
+
+def load_statsbomb_events(competition_id: int, season_id: int) -> pd.DataFrame:
+    """
+    Loads StatsBomb EVENT data for a specific competition and season,
+    saving it directly as a Parquet file for better performance.
+    """
+    # Nota el cambio de extensión a .parquet
+    filepath = f"{RAW_DATA_DIR}/statsbomb/sb_events_{competition_id}_{season_id}.parquet"
+
+    # 1. Check Cache (Asegúrate de que tu función _check_local_cache lea parquet si aplica)
+    cached_data = _check_local_cache(filepath)
+    if cached_data is not None:
+        return cached_data
+        
+    # 2. Download via API
+    logger.info(f"Downloading StatsBomb EVENTS for comp: {competition_id}, season: {season_id}")
+    try:
+        # A. Obtenemos los partidos para extraer la lista de match_ids
+        import statsbombpy.sb as sb
+        matches_df = sb.matches(competition_id=competition_id, season_id=season_id)
+        match_ids = matches_df['match_id'].tolist()
+        
+        # B. Iteramos sobre cada partido para descargar sus eventos
+        all_events = []
+        for match_id in match_ids:
+            # sb.events() extrae pases, tiros, faltas, etc., de un solo partido
+            match_events = sb.events(match_id=match_id)
+            all_events.append(match_events)
+            
+        # C. Unimos todos los DataFrames en uno solo
+        df_events = pd.concat(all_events, ignore_index=True)
+        
+        # D. Guardamos en formato Parquet
+        df_events.to_parquet(filepath, index=False, engine='pyarrow')
+        logger.info(f"Events data successfully saved to {filepath}")
+        
+        return df_events
+        
+    except Exception as e:
+        logger.error(f"Failed to load StatsBomb event data: {e}")
         return None
 
 def load_nfl(years: list, data_type: str = "pbp") -> pd.DataFrame:
