@@ -16,6 +16,11 @@ import requests
 import logging
 import pandas as pd
 from io import StringIO
+import ssl
+
+# Bypass SSL certificate errors on macOS for data downloads
+ssl._create_default_https_context = ssl._create_unverified_context
+
 
 # 1. Professional Logging Configuration
 logging.basicConfig(
@@ -198,7 +203,7 @@ def load_nfl(years: list, data_type: str = "pbp") -> pd.DataFrame:
         if data_type == "pbp":
             df = nfl.import_pbp_data(years)
         elif data_type == "roster":
-            df = nfl.import_rosters(years)
+            df = nfl.import_seasonal_rosters(years)
         else:
             logger.error(f"Unsupported NFL data type: {data_type}")
             return None
