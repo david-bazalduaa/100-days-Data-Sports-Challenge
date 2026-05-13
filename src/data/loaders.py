@@ -216,3 +216,44 @@ def load_nfl(years: list, data_type: str = "pbp") -> pd.DataFrame:
     except Exception as e:
         logger.error(f"Failed to load NFL data: {e}")
         return None
+
+def load_metrica_tracking(url: str, team_name: str) -> pd.DataFrame:
+    """
+    Loads and cleans Metrica Sports tracking data from a URL.
+    Standardizes column names to {Team}_{PlayerID}_{Coord} format.
+    """
+    logger.info(f"Downloading Metrica tracking data for {team_name}...")
+    try:
+        response = requests.get(url)
+        response.raise_for_status()
+        
+        # Read the first 3 rows to extract metadata for headers
+        header_df = pd.read_csv(StringIO(response.text), nrows=3, header=None)
+        player_ids = header_df.iloc[1].values
+        
+        # Load the actual data
+        df = pd.read_csv(StringIO(response.text), skiprows=3, header=None)
+        
+        # Professional Column Renaming
+        columns = ['Period', 'Frame', 'Time [s]']
+        
+        # Metrica tracking data columns after the first 3 (Period, Frame, Time):
+        # Pairs of (X, Y) for each player, then finally (X, Y) for the ball.
+        # We use the player IDs from Row 1.
+        data_cols = df.columns[3:]
+        for i in range(0, len(data_cols)-2, 2):
+            p_id = player_ids[i+3]
+            columns.append(f"{team_name}_{p_id}_X")
+            columns.append(f"{team_name}_{p_id}_Y")
+            
+        # Add Ball columns (last two)
+        columns.append("Ball_X")
+        columns.append("Ball_Y")
+        
+        df.columns = columns
+        logger.info(f"Successfully loaded tracking data for {team_name}. Shape: {df.shape}")
+        return df
+        
+    except Exception as e:
+        logger.error(f"Failed to load Metrica tracking data: {e}")
+        return None
