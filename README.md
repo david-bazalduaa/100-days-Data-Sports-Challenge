@@ -4,7 +4,7 @@
 >
 > Building professional-grade data products for football and American football.
 >
-> 📊 **Dashboard de Seguimiento:** [david-bazalduaa.github.io/100-days-Data-Sports-Challenge](https://david-bazalduaa.github.io/100-days-Data-Sports-Challenge/)
+>  **Follow up Dashboard:** [david-bazalduaa.github.io/100-days-Data-Sports-Challenge](https://david-bazalduaa.github.io/100-days-Data-Sports-Challenge/)
 
 [![Progress](https://img.shields.io/badge/Progress-Day%207%2F100-brightgreen?style=for-the-badge)]()
 [![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=for-the-badge&logo=python&logoColor=white)]()
