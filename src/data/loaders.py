@@ -30,7 +30,9 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-RAW_DATA_DIR = "/Users/davidbazalduamendez/Documents/GitHub/100-days-Data-Sports-Challenge/data/raw"
+# Rutas dinámicas para que funcione tanto en Windows como en Mac
+PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
+RAW_DATA_DIR = os.path.join(PROJECT_ROOT, "data", "raw")
 os.makedirs(RAW_DATA_DIR, exist_ok=True) # Ensure directory exists
 
 # FBref League IDs mapping
@@ -52,7 +54,10 @@ def _check_local_cache(filepath: str) -> pd.DataFrame:
     """Checks if a file exists locally. Returns DataFrame or None."""
     if os.path.exists(filepath):
         logger.info(f"Local cache found. Loading data from: {filepath}")
-        return pd.read_csv(filepath)
+        if filepath.endswith('.parquet'):
+            return pd.read_parquet(filepath, engine='pyarrow')
+        else:
+            return pd.read_csv(filepath)
     logger.info(f"No local cache found for: {filepath}. Proceeding to download.")
     return None
 
