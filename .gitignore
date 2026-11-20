@@ -64,6 +64,7 @@ wandb/
 # ----- IDE / OS -----
 .idea/
 .vscode/
+.gemini/
 *.swp
 *.swo
 *~
