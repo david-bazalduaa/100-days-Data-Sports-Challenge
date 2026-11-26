@@ -46,7 +46,9 @@ class PlayerSimilarityEngine:
     def __init__(
         self,
         feature_cols: Optional[List[str]] = None,
-        scaler_type: str = "standard"
+        scaler_type: str = "standard",
+        data_path: Optional[Any] = None,
+        df: Optional[pd.DataFrame] = None
     ) -> None:
         """
         Initializes the similarity engine with specified feature space and scaler.
@@ -54,6 +56,8 @@ class PlayerSimilarityEngine:
         Args:
             feature_cols: List of column names to construct the player style vector.
             scaler_type: 'standard' (zero mean, unit variance) or 'robust' (median/IQR).
+            data_path: Optional path to .parquet dataset to auto-load and fit.
+            df: Optional DataFrame to auto-fit immediately upon instantiation.
         """
         self.feature_cols = feature_cols or DEFAULT_STYLE_FEATURES
         self.scaler_type = scaler_type.lower()
@@ -65,6 +69,23 @@ class PlayerSimilarityEngine:
         self.df: Optional[pd.DataFrame] = None
         self.X_scaled: Optional[np.ndarray] = None
         self._is_fitted: bool = False
+
+        if df is not None:
+            self.fit(df)
+        elif data_path is not None:
+            p = Path(data_path)
+            if p.exists():
+                self.fit(pd.read_parquet(p))
+
+    @property
+    def df_clean(self) -> Optional[pd.DataFrame]:
+        """Convenience alias for fitted DataFrame."""
+        return self.df
+
+    @property
+    def feature_vectors(self) -> Optional[np.ndarray]:
+        """Convenience alias for normalized feature matrix."""
+        return self.X_scaled
 
     def fit(self, df: pd.DataFrame) -> "PlayerSimilarityEngine":
         """
