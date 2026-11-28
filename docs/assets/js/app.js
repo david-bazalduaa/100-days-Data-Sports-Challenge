@@ -238,14 +238,40 @@ function initDetailToggle() {
     });
 }
 
+async function syncCompletedFromYaml() {
+    try {
+        const resp = await fetch('_data/progress.yml');
+        if (!resp.ok) return;
+        const text = await resp.text();
+        const yamlCompleted = [];
+        let currentDay = null;
+        for (const line of text.split(/\r?\n/)) {
+            const dayMatch = line.match(/^-\s*day:\s*(\d+)/);
+            if (dayMatch) currentDay = parseInt(dayMatch[1], 10);
+            if (currentDay !== null && /status:\s*["']?completed["']?/.test(line)) {
+                yamlCompleted.push(currentDay);
+            }
+        }
+        if (yamlCompleted.length > 0) {
+            const merged = Array.from(new Set([...getCompletedDays(), ...yamlCompleted])).sort((a, b) => a - b);
+            saveCompletedDays(merged);
+            buildGrid();
+            updateStats();
+        }
+    } catch {
+        // Fallback silently to DEFAULT_COMPLETED_DAYS when opened via file://
+    }
+}
+
 // ── Init ──
 document.addEventListener('DOMContentLoaded', () => {
     // Seed localStorage on first visit
     if (!localStorage.getItem(STORAGE_KEY)) {
-        saveCompletedDays([1, 2, 3]);
+        saveCompletedDays(DEFAULT_COMPLETED_DAYS);
     }
     buildGrid();
     updateStats();
+    syncCompletedFromYaml();
     initNav();
     initDetailClose();
     initDetailToggle();
