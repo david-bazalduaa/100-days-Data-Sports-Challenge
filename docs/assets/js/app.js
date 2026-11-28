@@ -108,7 +108,7 @@ const PROGRESS_DATA = [
 ];
 
 // ── LocalStorage helpers ──
-const DEFAULT_COMPLETED_DAYS = Array.from({ length: 34 }, (_, i) => i + 1);
+const DEFAULT_COMPLETED_DAYS = Array.from({ length: 35 }, (_, i) => i + 1);
 
 function getCompletedDays() {
     try {
