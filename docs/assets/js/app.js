@@ -1,5 +1,5 @@
 // ============================================================
-// 100 Days of Data & Sports — App Logic
+// 100 Days of Data & Sports: App Logic
 // ============================================================
 
 const STORAGE_KEY = 'sports100_completed';
@@ -153,7 +153,7 @@ function buildGrid() {
         cell.className = `day-cell phase-${item.phase} ${isCompleted ? 'completed' : 'pending'}`;
         cell.textContent = item.day;
         cell.dataset.day = item.day;
-        cell.title = `Day ${item.day}: ${item.objective} — Click to toggle`;
+        cell.title = `Day ${item.day}: ${item.objective} (Click to toggle)`;
         cell.addEventListener('click', () => {
             toggleDay(item.day);
             buildGrid();

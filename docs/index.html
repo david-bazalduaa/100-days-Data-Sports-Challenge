@@ -18,8 +18,9 @@
             <div class="nav-links">
                 <a href="#hero">Home</a>
                 <a href="#tracker">Tracker</a>
-                <a href="phase2-journal.html">Journal</a>
                 <a href="#showcase">Phase 1</a>
+                <a href="#phase2-gallery">Phase 2</a>
+                <a href="phase2-journal.html">Journal</a>
                 <a href="#projects">Projects</a>
                 <a href="#stack">Stack</a>
                 <a href="#about">About</a>
@@ -32,7 +33,7 @@
         <div class="hero-content">
             <p class="hero-label">100-Day Intensive Challenge</p>
             <h1 class="hero-title">Data <span class="accent">&</span> Sports</h1>
-            <p class="hero-subtitle">Building production-grade ML products for football and American football — one model, one insight, one day at a time.</p>
+            <p class="hero-subtitle">Building production-grade ML products for football and American football: one model, one insight, one day at a time.</p>
             <div class="hero-stats">
                 <div class="stat">
                     <span class="stat-number" id="stat-days">35</span>
@@ -133,22 +134,74 @@
                         <span class="project-tag">nflverse</span>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <!-- Phase 2 Technical Journal Card -->
+    <!-- Phase 2 Gallery -->
+    <section class="showcase" id="phase2-gallery" style="background: var(--bg-alt);">
+        <div class="container">
+            <h2 class="section-title">Phase 2: EDA &amp; Feature Engineering Gallery</h2>
+            <p class="section-subtitle">Tactical insights, clustering, and draft analytics across football and NFL (Days 16-35).</p>
+
+            <div class="showcase-grid">
                 <a href="phase2-journal.html" class="showcase-card" style="text-decoration: none; color: inherit; display: flex; flex-direction: column;">
                     <div class="showcase-img-wrap">
-                        <img src="images/phase2_act1_pressing_ppda.png" alt="Phase 2 Technical Journal" class="showcase-img">
+                        <img src="images/phase2_act1_pressing_ppda.png" alt="World Cup 2022 Pressing Quadrant" class="showcase-img">
                     </div>
                     <div class="showcase-info" style="display: flex; flex-direction: column; flex: 1;">
-                        <div class="project-sport football">Phase 2 Journal</div>
-                        <h3>Qatar 2022: Pressing, Networks &amp; Clustering</h3>
-                        <p>Three-act technical story connecting PPDA pressing traps, Argentina's passing network centrality, and GMM/HDBSCAN player archetypes.</p>
+                        <div class="project-sport football">Football</div>
+                        <h3>WC 2022 Pressing &amp; PPDA Quadrant</h3>
+                        <p>Mapping all 32 national teams by Passes Allowed per Defensive Action (PPDA) and high turnovers forced.</p>
                         <div style="display: flex; gap: 6px; flex-wrap: wrap; margin-top: auto;">
-                            <span class="project-tag">Technical Blog</span>
-                            <span class="project-tag" style="background: var(--accent-light); color: var(--accent-dark); font-weight: 700;">Read Article &rarr;</span>
+                            <span class="project-tag">Day 24</span>
+                            <span class="project-tag" style="background: var(--accent-light); color: var(--accent-dark); font-weight: 700;">Read Journal &rarr;</span>
                         </div>
                     </div>
                 </a>
+
+                <a href="phase2-journal.html" class="showcase-card" style="text-decoration: none; color: inherit; display: flex; flex-direction: column;">
+                    <div class="showcase-img-wrap">
+                        <img src="images/phase2_act2_passing_network.png" alt="Argentina Passing Network" class="showcase-img">
+                    </div>
+                    <div class="showcase-info" style="display: flex; flex-direction: column; flex: 1;">
+                        <div class="project-sport football">Football</div>
+                        <h3>Argentina Final Passing Network</h3>
+                        <p>Directed graph topology and Betweenness Centrality hubs during the 2022 World Cup Final (Min 0-41).</p>
+                        <div style="display: flex; gap: 6px; flex-wrap: wrap; margin-top: auto;">
+                            <span class="project-tag">Day 19</span>
+                            <span class="project-tag">NetworkX</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="footballscout.html" class="showcase-card" style="text-decoration: none; color: inherit; display: flex; flex-direction: column;">
+                    <div class="showcase-img-wrap">
+                        <img src="images/tactical_universe_2d.png" alt="2D Tactical Universe Clustering" class="showcase-img">
+                    </div>
+                    <div class="showcase-info" style="display: flex; flex-direction: column; flex: 1;">
+                        <div class="project-sport football">Football</div>
+                        <h3>2D Tactical Universe &amp; Clustering</h3>
+                        <p>GMM, PCA, and HDBSCAN density clustering uncovering tactical archetypes and statistical outliers.</p>
+                        <div style="display: flex; gap: 6px; flex-wrap: wrap; margin-top: auto;">
+                            <span class="project-tag">Day 27</span>
+                            <span class="project-tag" style="background: var(--accent-light); color: var(--accent-dark); font-weight: 700;">View Project &rarr;</span>
+                        </div>
+                    </div>
+                </a>
+
+                <div class="showcase-card">
+                    <div class="showcase-img-wrap">
+                        <img src="images/nfl_combine_scout_fallacy.png" alt="NFL Combine Scout Fallacy" class="showcase-img">
+                    </div>
+                    <div class="showcase-info">
+                        <div class="project-sport nfl">NFL</div>
+                        <h3>NFL Draft Combine &amp; Scout Fallacy</h3>
+                        <p>Comparing GM draft capital preferences against real NFL Approximate Value across biometric drills.</p>
+                        <span class="project-tag">Day 30-31</span>
+                        <span class="project-tag">nflverse</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -172,7 +225,7 @@
                 <div class="project-card">
                     <div class="project-sport football">Football</div>
                     <h3>xG-Lab</h3>
-                    <p>Expected Goals model from first principles — logistic baseline to calibrated XGBoost with SHAP.</p>
+                    <p>Expected Goals model from first principles: logistic baseline to calibrated XGBoost with SHAP.</p>
                     <span class="project-tag">Predictive Model</span>
                     <span class="project-tag">Calibration</span>
                 </div>
@@ -193,7 +246,7 @@
                 <div class="project-card">
                     <div class="project-sport multi">Multi-Sport</div>
                     <h3>GamePulse</h3>
-                    <p>Interactive game flow analyzer — WP charts, xG timelines, momentum visualizations.</p>
+                    <p>Interactive game flow analyzer: WP charts, xG timelines, momentum visualizations.</p>
                     <span class="project-tag">Plotly</span>
                     <span class="project-tag">Visualization</span>
                 </div>
@@ -272,10 +325,10 @@
                 <div class="about-principles">
                     <h4>Key Principles</h4>
                     <ul>
-                        <li><strong>Temporal validation only</strong> — No random splits for sports data.</li>
-                        <li><strong>Per-90 normalization</strong> — Fair player comparisons.</li>
-                        <li><strong>Calibrated probabilities</strong> — Platt/isotonic + Brier score.</li>
-                        <li><strong>SHAP for every model</strong> — Interpretability is not optional.</li>
+                        <li><strong>Temporal validation only:</strong> No random splits for sports data.</li>
+                        <li><strong>Per-90 normalization:</strong> Fair player comparisons.</li>
+                        <li><strong>Calibrated probabilities:</strong> Platt/isotonic + Brier score.</li>
+                        <li><strong>SHAP for every model:</strong> Interpretability is not optional.</li>
                     </ul>
                 </div>
             </div>
