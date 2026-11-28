@@ -13,127 +13,127 @@
 - day: 4
   phase: 1
   objective: "StatsBomb Open Data"
-  status: "pending"
+  status: "completed"
 - day: 5
   phase: 1
   objective: "nflverse Data"
-  status: "pending"
+  status: "completed"
 - day: 6
   phase: 1
   objective: "FBref Scraper"
-  status: "pending"
+  status: "completed"
 - day: 7
   phase: 1
   objective: "Ingestion Pipeline"
-  status: "pending"
+  status: "completed"
 - day: 8
   phase: 1
   objective: "Football Data Quality"
-  status: "pending"
+  status: "completed"
 - day: 9
   phase: 1
   objective: "NFL Data Quality"
-  status: "pending"
+  status: "completed"
 - day: 10
   phase: 1
   objective: "Football Schema"
-  status: "pending"
+  status: "completed"
 - day: 11
   phase: 1
   objective: "NFL Schema"
-  status: "pending"
+  status: "completed"
 - day: 12
   phase: 1
   objective: "Tracking Data Intro"
-  status: "pending"
+  status: "completed"
 - day: 13
   phase: 1
   objective: "Visualization Library"
-  status: "pending"
+  status: "completed"
 - day: 14
   phase: 1
   objective: "Publish Phase 1"
-  status: "pending"
+  status: "completed"
 - day: 15
   phase: 1
   objective: "Phase 1 Retrospective"
-  status: "pending"
+  status: "completed"
 - day: 16
   phase: 2
   objective: "Shot Analysis EDA"
-  status: "pending"
+  status: "completed"
 - day: 17
   phase: 2
   objective: "xG Features Part 1"
-  status: "pending"
+  status: "completed"
 - day: 18
   phase: 2
   objective: "xG Geometrical Features"
-  status: "pending"
+  status: "completed"
 - day: 19
   phase: 2
   objective: "Passing Networks"
-  status: "pending"
+  status: "completed"
 - day: 20
   phase: 2
   objective: "NFL Offensive EDA"
-  status: "pending"
+  status: "completed"
 - day: 21
   phase: 2
   objective: "NFL Player Features"
-  status: "pending"
+  status: "completed"
 - day: 22
   phase: 2
   objective: "Rolling Features"
-  status: "pending"
+  status: "completed"
 - day: 23
   phase: 2
   objective: "Per-90 and Radar Charts"
-  status: "pending"
+  status: "completed"
 - day: 24
   phase: 2
   objective: "Pressing Analysis"
-  status: "pending"
+  status: "completed"
 - day: 25
   phase: 2
   objective: "NFL Situational Analysis"
-  status: "pending"
+  status: "completed"
 - day: 26
   phase: 2
   objective: "Player Heatmaps KDE"
-  status: "pending"
+  status: "completed"
 - day: 27
   phase: 2
   objective: "Player Clustering"
-  status: "pending"
+  status: "completed"
 - day: 28
   phase: 2
   objective: "Player Similarity Engine"
-  status: "pending"
+  status: "completed"
 - day: 29
   phase: 2
   objective: "Project 1 README"
-  status: "pending"
+  status: "completed"
 - day: 30
   phase: 2
   objective: "NFL Draft Combine EDA"
-  status: "pending"
+  status: "completed"
 - day: 31
   phase: 2
   objective: "Draft Features"
-  status: "pending"
+  status: "completed"
 - day: 32
   phase: 2
   objective: "Possession Analysis"
-  status: "pending"
+  status: "completed"
 - day: 33
   phase: 2
   objective: "Formation Analysis"
-  status: "pending"
+  status: "completed"
 - day: 34
   phase: 2
   objective: "Journal Post Phase 2"
-  status: "pending"
+  status: "completed"
 - day: 35
   phase: 2
   objective: "Phase 2 Retrospective"

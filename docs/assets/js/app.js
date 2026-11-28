@@ -108,12 +108,16 @@ const PROGRESS_DATA = [
 ];
 
 // ── LocalStorage helpers ──
+const DEFAULT_COMPLETED_DAYS = Array.from({ length: 34 }, (_, i) => i + 1);
+
 function getCompletedDays() {
     try {
         const raw = localStorage.getItem(STORAGE_KEY);
-        return raw ? JSON.parse(raw) : [1, 2, 3]; // days 1-3 completed by default
+        if (!raw) return DEFAULT_COMPLETED_DAYS;
+        const parsed = JSON.parse(raw);
+        return parsed.length >= DEFAULT_COMPLETED_DAYS.length ? parsed : DEFAULT_COMPLETED_DAYS;
     } catch {
-        return [1, 2, 3];
+        return DEFAULT_COMPLETED_DAYS;
     }
 }
 

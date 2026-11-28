@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phase 2 Technical Journal: A Three-Act Tactical Story from Qatar 2022 | DB</title>
+    <meta name="description"
+        content="From pressing chaos to positional harmony: connecting PPDA, passing network centrality, and unsupervised player clustering across the 2022 World Cup.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .article-header {
+            padding: 110px 0 42px;
+            background: var(--bg-alt);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+        }
+
+        .breadcrumb a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .breadcrumb a:hover {
+            color: var(--accent-dark);
+        }
+
+        .article-title {
+            font-size: clamp(2rem, 4.5vw, 3.1rem);
+            font-weight: 900;
+            letter-spacing: -1px;
+            line-height: 1.12;
+            margin-bottom: 16px;
+            color: var(--text);
+            max-width: 900px;
+        }
+
+        .article-subtitle {
+            font-size: 1.12rem;
+            color: var(--text-muted);
+            max-width: 820px;
+            line-height: 1.7;
+            margin-bottom: 24px;
+        }
+
+        .badge-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .article-body {
+            padding: 56px 0 80px;
+        }
+
+        .article-container {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .act-label {
+            display: inline-block;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--accent-dark);
+            background: var(--accent-light);
+            padding: 4px 10px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+        }
+
+        .article-section {
+            margin-bottom: 56px;
+        }
+
+        .article-section h2 {
+            font-size: 1.75rem;
+            font-weight: 800;
+            margin-bottom: 14px;
+            color: var(--text);
+        }
+
+        .article-section p {
+            font-size: 1.04rem;
+            line-height: 1.8;
+            color: var(--text);
+            margin-bottom: 16px;
+        }
+
+        .kpi-strip {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 16px;
+            margin: 26px 0;
+        }
+
+        .kpi-card {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 18px;
+        }
+
+        .kpi-val {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.65rem;
+            font-weight: 800;
+            color: var(--accent-dark);
+        }
+
+        .kpi-desc {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+
+        .figure-block {
+            margin: 28px 0;
+            background: #0e1117;
+            border-radius: 14px;
+            padding: 16px;
+            border: 1px solid var(--border);
+        }
+
+        .figure-block img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+        }
+
+        .figure-caption {
+            font-size: 0.86rem;
+            color: #9ba3b0;
+            margin-top: 10px;
+            line-height: 1.5;
+        }
+
+        .callout-box {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            padding: 24px 28px;
+            border-radius: 12px;
+            margin: 28px 0;
+        }
+
+        .callout-box ul {
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+
+        .callout-box li {
+            margin-bottom: 8px;
+        }
+
+        .callout-box h4 {
+            font-size: 0.95rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+            color: var(--text);
+        }
+
+        .callout-box p, .callout-box li {
+            font-size: 0.96rem;
+            color: var(--text-muted);
+            line-height: 1.65;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">DB<span class="accent">.</span></a>
+            <div class="nav-links">
+                <a href="index.html#hero">Home</a>
+                <a href="index.html#tracker">Tracker</a>
+                <a href="phase2-journal.html" style="color: var(--accent-dark); font-weight: 700;">Journal</a>
+                <a href="index.html#projects">Projects</a>
+                <a href="footballscout.html">FootballScout</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="article-header">
+        <div class="article-container">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <span>Phase 2 Technical Journal</span>
+            </div>
+            <p class="hero-label" style="margin-bottom: 10px;">Phase 2 Capstone Article (Days 19, 24 &amp; 27)</p>
+            <h1 class="article-title">From Pressing Chaos to Positional Harmony: A Three-Act Tactical Story from Qatar 2022</h1>
+            <p class="article-subtitle">
+                Why does pressing harder not always win matches? By chaining defensive disruption (PPDA), passing network centrality, and unsupervised player clustering across 234,652 StatsBomb events, we trace how World Cup teams actually control space.
+            </p>
+            <div class="badge-row">
+                <span class="project-tag">StatsBomb Open Data</span>
+                <span class="project-tag">PPDA &amp; High Turnovers</span>
+                <span class="project-tag">NetworkX</span>
+                <span class="project-tag">GMM + HDBSCAN</span>
+                <span class="project-tag">mplsoccer</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="article-body">
+        <div class="article-container">
+
+            <!-- Hook -->
+            <section class="article-section">
+                <span class="act-label">The Football Question</span>
+                <h2>Why Does Raw Effort Not Equal Tactical Control?</h2>
+                <p>
+                    Every major tournament produces the same post-match paradox: a team presses relentlessly for 90 minutes, racks up 65% possession, and still walks off the pitch eliminated. Raw event counts hide structural efficiency.
+                </p>
+                <p>
+                    Across Phase 2 of the 100 Days of Data &amp; Sports Challenge, we investigated 64 World Cup 2022 matches (234,652 events) from three complementary angles: how teams disrupt opponents <strong>without the ball</strong> (Act I), how they organize progression <strong>with the ball</strong> (Act II), and how individual players occupy <strong>tactical roles</strong> inside those systems (Act III).
+                </p>
+
+                <div class="kpi-strip">
+                    <div class="kpi-card">
+                        <div class="kpi-val">234,652</div>
+                        <div class="kpi-desc">StatsBomb events audited across 64 WC 2022 matches</div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-val">1.65 PPDA</div>
+                        <div class="kpi-desc">Spain's tournament-leading pressing intensity</div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-val">0.081</div>
+                        <div class="kpi-desc">Enzo Fernandez peak Betweenness Centrality in Final</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Act I -->
+            <section class="article-section">
+                <span class="act-label">Act I: Without the Ball (Day 24)</span>
+                <h2>Pressing Intensity vs. High Turnovers: The Volume Paradox</h2>
+                <p>
+                    Counting raw <code>Pressure</code> events is misleading because a team defending its own box accumulates pressures simply by chasing the ball. To measure proactive pressing, we paired <strong>Passes Allowed per Defensive Action (PPDA)</strong> in the opponent's build-up zone (<code>x &lt; 72</code>) with <strong>High Turnovers per match</strong> (ball recoveries and interceptions above <code>x &gt; 60</code>).
+                </p>
+
+                <div class="figure-block">
+                    <img src="images/phase2_act1_pressing_ppda.png" alt="World Cup 2022 Pressing Intensity Quadrant">
+                    <p class="figure-caption">
+                        <strong>Figure 1:</strong> Tournament-wide Pressing Quadrant across all 32 national teams. Lower PPDA (right) indicates fewer opponent passes allowed per defensive action; higher vertical position indicates more high turnovers forced per match.
+                    </p>
+                </div>
+
+                <p>
+                    <strong>Spain (1.65 PPDA, 24.25 high turnovers/match)</strong> and <strong>Germany (2.14 PPDA, 34.00 high turnovers/match)</strong> dominated the upper-right elite pressing quadrant, while <strong>Mexico (1.98 PPDA, 29.00 high turnovers/match)</strong> also pressed aggressively. Yet neither Spain nor Germany reached the quarterfinals. Pressing creates chaos and territory, but without vertical box penetration once the ball is won, elite pressing alone does not convert control into goals.
+                </p>
+                <p>
+                    Methodologically, filtering out set-piece restarts and normalizing defensive actions by the opponent's build-up volume prevents low-block teams from looking artificially passive or hyper-active due to scoreline effects.
+                </p>
+            </section>
+
+            <!-- Act II -->
+            <section class="article-section">
+                <span class="act-label">Act II: With the Ball (Day 19)</span>
+                <h2>Passing Networks: How Argentina Structured the Final</h2>
+                <p>
+                    Once possession is recovered, how does a champion organize its circulation? Using <code>NetworkX</code>, we modeled completed open-play passes before the first substitution (Minutes 0 to 41) in the 2022 World Cup Final as a directed weighted graph, measuring each player's <strong>Betweenness Centrality</strong> (how often they act as a structural bridge between teammates).
+                </p>
+
+                <div class="figure-block">
+                    <img src="images/phase2_act2_passing_network.png" alt="Argentina Passing Network in 2022 World Cup Final">
+                    <p class="figure-caption">
+                        <strong>Figure 2:</strong> Argentina's pre-substitution passing network against France (Minutes 0 to 41). Node size scales with completed passes, color encodes Betweenness Centrality, and edge thickness reflects pass volume (minimum 3 passes shown).
+                    </p>
+                </div>
+
+                <p>
+                    Rather than funneling every build-up pass through Lionel Messi, Argentina built a balanced central spine: <strong>Enzo Fernandez (0.081 centrality, 40 passes)</strong> and <strong>Nicolas Otamendi (0.070, 44 passes)</strong> anchored progression from deep, while <strong>Rodrigo De Paul (0.041, 37 passes)</strong> balanced the right half-space and <strong>Angel Di Maria (0.055, 25 passes)</strong> stretched France's right flank into lethal 1v1 isolation.
+                </p>
+                <p>
+                    Truncating the graph at the first substitution (Minute 41) is essential for tactical validity: once new personnel enter, average coordinates shift and blur the coach's starting structural blueprint.
+                </p>
+            </section>
+
+            <!-- Act III -->
+            <section class="article-section">
+                <span class="act-label">Act III: The Individual Archetypes (Day 27)</span>
+                <h2>Clustering the Tactical Universe: GMM, PCA &amp; HDBSCAN</h2>
+                <p>
+                    Nominal positions on a team sheet ("Midfielder", "Forward") hide massive stylistic differences. By normalizing per-90 progressive passing, carries, pressures, and xG contribution, then applying <strong>PCA</strong>, <strong>Gaussian Mixture Models (GMM)</strong>, and <strong>HDBSCAN</strong> density clustering, we mapped players into functional tactical archetypes and isolated statistical "Unicorns" whose hybrid profiles defy standard labels.
+                </p>
+                <p>
+                    Using soft probabilistic assignments from GMM alongside HDBSCAN's noise-aware clustering lets recruitment analysts distinguish true multi-role hybrids (such as Luka Modric or Kylian Mbappe) from players who merely sit near an arbitrary boundary.
+                </p>
+
+                <div class="figure-block">
+                    <img src="images/tactical_universe_2d.png" alt="2D Tactical Universe Player Clustering">
+                    <p class="figure-caption">
+                        <strong>Figure 3:</strong> 2D PCA projection of World Cup 2022 player styles, separating deep tempo-setters, overlapping fullbacks, box poachers, and multi-dimensional outliers.
+                    </p>
+                </div>
+
+                <div class="callout-box">
+                    <h4>Tactical Takeaways &amp; Honest Limitations</h4>
+                    <ul>
+                        <li><strong>System + Hub + Profile must align:</strong> Elite teams pair proactive pressing traps (Act I) with distributed passing hubs (Act II) and complementary player archetypes (Act III).</li>
+                        <li><strong>From EDA to Phase 3 Modeling:</strong> Every engineered signal here (PPDA, network centrality, and cluster embeddings) feeds directly into our upcoming predictive models for match outcomes and expected threat.</li>
+                        <li><strong>Event-stream blind spots:</strong> StatsBomb event logs capture on-ball actions accurately, but they cannot observe off-ball decoy runs, defensive cover shadows, or pitch control between passes.</li>
+                        <li><strong>Sample-size variance:</strong> Knock-out tournament data spans 3 to 7 matches per team, so single-match game states (such as trailing early) can skew raw PPDA and pass-share numbers.</li>
+                    </ul>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 David Bazaldua. 100 Days of Data &amp; Sports Challenge.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
